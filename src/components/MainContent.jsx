@@ -19,7 +19,7 @@ export default function MainContent({ language }) {
     }
 
     return (
-        <div className="bg-stone-50 p-10">
+        <div className="bg-stone-50 p-5">
             <div className="w-full max-w-5xl mx-auto">
                 {/* Tabs */}
                 <div className="flex flex-wrap justify-center gap-6 mb-10">

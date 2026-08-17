@@ -2,12 +2,12 @@ import { FaGithub, FaLinkedin, FaEnvelope, FaGlobe } from "react-icons/fa";
 
 export default function Header({ language, onChangeLanguage }) {
     return (
-        <header className="relative w-full py-15 text-center">
+        <header className="relative w-full pt-20 pb-10 text-center">
             <button onClick={onChangeLanguage}
-                className="absolute top-6 right-8 flex items-center gap-2 text-sm text-stone-500 hover:text-stone-900 transition">
+                className="absolute top-10 right-15 flex items-center gap-2 text-xl bg-stone-100 text-stone-500 hover:text-stone-900 transition">
                 <FaGlobe /> {language === "en" ? "中文" : "EN"}
             </button>
-            <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-stone-900">
+            <h1 className="text-5xl md:text-5xl font-bold text-stone-800 mb-10">
                 {language === "en" ? "Mengmeng Fang (Claire)" : "方 萌萌"}
             </h1>
             <p className="mt-4 text-lg md:text-xl text-stone-500">
