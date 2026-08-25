@@ -9,13 +9,13 @@ export default function MainContent({ language }) {
     const [selectedContent, setSelectedContent] = useState("about");
     let tabContent;
     if (selectedContent === "about") {
-        tabContent = <About language={language}/>
+        tabContent = <About language={language} />
     } else if (selectedContent === "education") {
-        tabContent = <Education language={language}/>
+        tabContent = <Education language={language} />
     } else if (selectedContent === "experience") {
         tabContent = <Experience />
     } else if (selectedContent === "projects") {
-        tabContent = <Projects language={language}/>
+        tabContent = <Projects language={language} />
     }
 
     return (
@@ -38,7 +38,11 @@ export default function MainContent({ language }) {
 
                 </div>
                 {/* content */}
-                {tabContent}
+                <div className="max-w-4xl mx-auto bg-stone-100 py-3 px-2 rounded-4xl">
+                    <div className="mx-6 my-5">
+                        {tabContent}
+                    </div>
+                </div>
             </div>
         </div>
     );

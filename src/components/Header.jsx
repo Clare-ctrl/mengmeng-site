@@ -12,7 +12,7 @@ export default function Header({ language, onChangeLanguage }) {
             </h1>
             <p className="mt-4 text-lg md:text-xl text-stone-500">
                 {language === "en" ? "MCS Student @ UIUC | Full-Stack Developer"
-                    : "美国伊利诺伊大学香槟分校（UIUC） 计算机科学硕士 · 全栈开发"}
+                    : "UIUC 计算机科学硕士 · 全栈开发"}
 
             </p>
             <div className="mt-8 flex justify-center items-center gap-8">
