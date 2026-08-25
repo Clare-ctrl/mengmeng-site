@@ -1,4 +1,5 @@
-import { FaGithub, FaLinkedin, FaEnvelope, FaGlobe } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope, FaGlobe, FaFileAlt } from "react-icons/fa";
+import SocialIcon from "./SocialIcon";
 
 export default function Header({ language, onChangeLanguage }) {
     return (
@@ -16,27 +17,30 @@ export default function Header({ language, onChangeLanguage }) {
 
             </p>
             <div className="mt-8 flex justify-center items-center gap-8">
-                <a
+                <SocialIcon
                     href="https://github.com/Clare-ctrl"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-2xl text-stone-400 hover:text-stone-900 transition-colors">
+                    label="GitHub">
                     <FaGithub />
-                </a>
-                <a
-                    href="https://github.com/Clare-ctrl"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-2xl text-stone-400 hover:text-stone-900 transition-colors">
+                </SocialIcon>
+                <SocialIcon
+                    href="https://www.linkedin.com/in/mengmeng-fang-04440b33/"
+                    label="LinkedIn">
                     <FaLinkedin />
-                </a>
-                <a
+                </SocialIcon>
+
+                <SocialIcon
                     href="mailto:mf57@illinois.edu"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-2xl text-stone-400 hover:text-stone-900 transition-colors">
+                    label={language === "en" ? "Email" : "邮箱"}>
                     <FaEnvelope />
-                </a>
+                </SocialIcon>
+
+                <SocialIcon
+                    href="/Mengmeng_Fang_Resume.pdf"
+                    label={language === "en" ? "Download Resume" : "下载简历"}
+                    download="Mengmeng_Fang_Resume.pdf">
+                    <FaFileAlt />
+                </SocialIcon>
+
             </div>
         </header>
     );
